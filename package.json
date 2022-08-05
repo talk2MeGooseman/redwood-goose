@@ -1,5 +1,10 @@
 {
   "private": true,
+  "scripts": {
+    start: "yarn rw serve api",
+    "deploy:setup": "pm2 deploy pm2.config.js production setup",
+    "deploy": "pm2 deploy pm2.config.js production deploy"
+  },
   "workspaces": {
     "packages": [
       "api",
@@ -8,7 +13,8 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "2.0.0"
+    "@redwoodjs/core": "2.0.0",
+    "pm2": "^5.2.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
