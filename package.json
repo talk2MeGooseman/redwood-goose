@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    start: "yarn rw serve api",
+    "start": "yarn rw serve api",
     "deploy:setup": "pm2 deploy pm2.config.js production setup",
     "deploy": "pm2 deploy pm2.config.js production deploy"
   },
