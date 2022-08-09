@@ -56,6 +56,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'redwood-goose'
-          slot-name: 'Production'
+          slot-name: 'redwood-goose-stage'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F4CC57183E9487F989852F3262F5502 }}
           package: .
