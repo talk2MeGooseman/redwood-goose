@@ -23,7 +23,7 @@ jobs:
 
       - name: yarn install, build, and test
         run: |
-          yarn install --immutable --immutable-cache --check-cache
+          yarn install --immutable
           yarn rw build
 
       - name: Zip artifact for deployment
