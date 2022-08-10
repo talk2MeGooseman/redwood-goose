@@ -1,9 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "yarn rw prisma migrate deploy && yarn rw serve api",
-    "deploy:setup": "pm2 deploy pm2.config.js production setup",
-    "deploy": "pm2 deploy pm2.config.js production deploy"
+    "build": "yarn rw build",
+    "start": "pm2 start ecosystem.config.js --no-daemon"
   },
   "workspaces": {
     "packages": [
