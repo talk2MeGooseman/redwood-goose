@@ -1,8 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "yarn rw build",
-    "start": "pm2 start ecosystem.config.js --no-daemon"
+    "build": "yarn rw build"
   },
   "workspaces": {
     "packages": [
