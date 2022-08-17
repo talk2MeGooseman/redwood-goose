@@ -109,9 +109,6 @@ fi
 # 2. Select node version
 selectNodeVersion
 
-echo Install workspace-tools.
-eval yarn plugin import workspace-tools
-
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
@@ -119,7 +116,7 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   echo "Running yarn install"
   eval yarn install
   echo "Build!"
-  eval yarn rw build
+  eval yarn rw build api
   exitWithMessageOnError "yarn failed"
   cd - > /dev/null
 fi
