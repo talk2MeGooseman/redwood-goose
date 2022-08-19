@@ -11,6 +11,9 @@ export const handler = createGraphQLHandler({
   directives,
   sdls,
   services,
+  cors: {
+    origin: 'https://witty-cliff-0d363da0f.1.azurestaticapps.net', // <-- web side domain
+  },
   onException: () => {
     // Disconnect from your database with an unhandled exception.
     db.$disconnect()
